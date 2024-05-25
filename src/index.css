@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+@layer base {
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  li {
+    @apply px-4;
+    @apply cursor-pointer;
+  }
+
+  .content-div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    transition: background-image 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Add transition for smooth effect */
+  }
+
+  .group:hover .group-hover\:opacity-100 {
+    opacity: 1;
+  }
+
+  .content-div:hover {
+    background-image: linear-gradient(
+      to right,
+      rgba(23, 40, 74, 0),
+      hsla(210, 100%, 50%, 0.8)
+    ) !important;
+  }
+}
